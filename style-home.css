@@ -1,0 +1,68 @@
+	body{
+		/*#RRGGBB -> Red, Green, Blue. vai de 0 a F (HexaDecimal) 00 sem a Cor, FF totalmente com a Cor
+		  rgb(R, G, B) -> Red, Green, Blue. A mesma coisa do Hexadecimal, mas de 0 a 255, 0 sem a Cor, 255 totalmente com a Cor*/
+		/*background: #CCCCCC*/ /*#CCCCCC cinza em HexaDecimal. Poderia colocar Gray, mas ai não da para detalhar muito a Cor, 
+							seria um Cinza pré determinado e ponto*/
+	}
+
+	.titulo-principal{
+		padding-left: 20px; 
+	}
+
+	.principal{
+		background: #CCCCCC;
+		padding: 20px;
+	}
+
+	#banner{
+		/*Largura (100% da pagina)*/
+		width: 100%;
+		/*Altura (300 pixels)*/
+		height: 400px;
+	}
+
+	.titulo-centralizado{
+		text-align: center;
+	}
+
+	/*Faz todos os paragrafos serem alinhados ao centro*/
+	p {
+		text-align: center
+	}
+
+	/*id de um dos paragrafos, para ser possivel mexer so nele*/
+	#missao{
+		font-size: 20px
+	}
+
+	/*Procura exatamente como está, 'em' (Italico) seguido de 'strong' (Negrito), ou seja, irá modificar para Red tudo que estiver
+	dentro de um Strong dentro de um Em*/
+	em strong{
+		color: red;
+	}
+
+	/*. -> Classe que se esta mexendo*/
+	.itens{
+		font-style: italic;
+	}
+
+	.beneficios{
+		background: #FFFFFF;
+		/*Adiciona um espacamento externo*/
+		padding: 20px;
+	}
+
+	ul{
+		/*Os conteudos ocupam toda a largura da linha, fazer com que o objeto seja inline-block faz com que ocupe o tamanho que queiramos,
+		só inline faz ocupar o tamanho dele mesmo*/
+		display: inline-block;
+		/*O alinhamento de objetos por padrão é embaixo, para deixar em cima so mudar assim:*/
+		vertical-align: top;
+		width: 20%;
+		/*coloca uma margem de 15% a direita*/
+		margin-right: 15%: 
+	}
+
+	.imagembeneficios{
+		width: 50%;
+	}

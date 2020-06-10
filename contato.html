@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contato - Barbearia Alura</title>
+		<link rel="stylesheet" href="reset.css"> <!--A ordem importa, primeiro tira o que o navegador faz e depois roda nosso CSS, se for ao contrario irá mudar nosso CSS -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!--Header é a divisao do cabeçalho do site-->
+		<header>
+			<div class="caixa">
+				<!--Alt é um titulo invisivel da imagem, para poder ser lido pelo leito de tela por exemplo-->
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html"><!--<a> é um link, onde nos leva para index.html-->
+							Home</a>
+						</li>
+						<li>
+							<a href="produto.html">Produtos</a>
+						</li>
+						<li>
+							<a href="contato.html">Contato</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<!--Tag de formulario-->
+			<form>
+				<!--Titulo do input "nomesobrenome", deixando clicar no titulo para digitar, alem da propria caixa de texto-->
+				<label for="nomesobrenome">Nome e Sobrenome</label>
+				<!--Caixa de input do tipo Texto-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required>
+
+				<!--Required deixa o campo obrigatorio, placeholder é o texto que estará la até o usuário digitar algo-->
+				<label for="email">Email</label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<!--Caixa de texto, tipo input mas maior (cols colunas rows linhas-->
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+				<!--Tag para divisão de inputs-->
+				<fieldset>
+					<legend>Como prefere nosso Contato?</legend>
+					<!--Botao de seleção (name diz q sao todos do mesmo grupo, entao ao clicar um troca o selecionado pelo clicado-->
+					<label for="radio-email"><input type="radio" name="contato" value="Email" id="radio-email">Email</label>
+
+					<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>					
+
+					<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp0" checked>WhatsApp</label>					
+				</fieldset>
+
+				<fieldset>
+					<p>Qual horário prefere sem atendido?</p>
+					<!--Menu de itens selecionaveis-->
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</fieldset>
+
+				<!--CheckBox-->
+				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+				<!--Botão para Enviar-->
+				<input type="submit" value="Enviar Formulário" class="enviar">
+			</form>
+
+			<!--Tabela -->
+			<table>
+				<!--Cabeçalho da Tabela-->
+				<thead>
+					<!--Linhas do Cabeçalho -->
+					<tr>
+						<!--Colunas -->
+						<th>Dia</th>
+						<th>Horário</th>
+					</tr>
+				</thead>
+				<!--Corpo da Tabela -->
+				<tbody>
+					<!--Linhas (t row) -->
+					<tr>
+						<!--Colunas -->
+						<td>Segunda</td>
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Quarta</td>
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Sexta</td>
+						<td>8h ~ 20h</td>
+					</tr>
+				</tbody>
+				<!--Ainda existe o <tfoot> a parte de baixo da tabela, exemplo de uso é para colocar o total da soma das linhas-->
+			</table>
+		</main>
+
+		<footer>
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+		</footer>
+	</body>
+</html>

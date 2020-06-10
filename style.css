@@ -1,0 +1,350 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa{
+	/*Deixa essa divisão como relativa, podendo ser alterado o posicionamento dela*/
+	position: relative;
+	width: 80%;
+	/*Cria uma margem automatica nos lados da caixa, deixando a Logo e o Menu afastados dos cantos*/
+	margin: 0 auto;
+}
+
+nav{
+	/*Deixa essa nav absoluta em relação ao que a engloba, ou seja, padrões como Top, Ritgh
+	e outros vão ter como base o elemento que engloba esse, no caso desse é a .caixa*/
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li{
+	/*Faz conteudo usar so seu espaco em vez da linha toda*/
+	display: inline;
+	margin: 0 0 0 15px; /*CIMA BAIXO DIREITA ESQUERDA, 15px de espaco para a esquerda*/
+}
+
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;/*deixa texto com uma fonte diferente*/
+	font-size: 22px;
+	text-decoration: none; /*deixa o texto sem decoracao nenhuma, no caso o sublinhado do texto*/
+}
+
+/*Hover diz a mudança que ocorre quando o mouse estiver por cima do item*/
+nav a:hover{
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos{
+	width: 80%;
+	margin: 40px auto;
+}
+
+.produtos li{
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	padding: 50px 0;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	/*Faz com que os 20px acima sejam parte da conta dos 30% de width, assim não acontece de ultrapassar 100% da pagina
+	e um item ir para baixo*/
+	box-sizing: border-box;
+	/*border-width: 2px;
+	border-style: solid;
+	border-color: #000000;*/
+	/*Esse comando faz o mesmo que os 3 acima, cria a borda com 2px de largura, solida e de cor preta*/
+	border: 2px solid #000000;
+	/*Arredonda as bordas como um circulo de 20px de raio*/
+	border-radius: 20px;
+}
+
+.produtos img{
+	width: 95%;
+}
+
+.produtos li:hover{
+	border-color: #C78C19;
+}
+ /*Active mudar ao quando clico no elemento*/
+.produtos li:active{
+	border-color: #088C19;
+}
+/*Altera o h2 quando o mouse esta em cima do li*/
+.produtos li:hover h2{
+	font-size: 31px;
+}
+
+.produtos h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao{
+	font-size: 20px;
+}
+
+.produto-preco{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer{
+	text-align: center;
+	/*Trás imagem para ser imagem de fundo*/
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright{
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form{
+	margin: 40px 0;
+}
+
+form label, form legend{
+	/*Faz o item ocupar toda a largura da pagina*/
+	display: block;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.input-padrao{
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	width: 50%;
+}
+
+.checkbox{
+	margin: 20px 0;
+}
+
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	/*Diz que a transformacao de background de orange para darkorange deve demorar 1s*/
+	transition: 800ms background, 1s transform;
+	/*Muda o mouse de seta para maozinha*/
+	cursor: pointer;
+}
+
+.enviar:hover{
+	background: #FF7000;
+	/*Transform faz algumas alteracoes no item, como transformar a escala em mais 5% e rodar o item em 0.5 grau*/
+	transform: scale(1.05) rotate(0.5deg);
+}
+
+table{
+	margin: 20px 40px;
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th{
+	padding-right: 15px;
+	padding-top: 8px;
+	border: 1px solid #000000;
+}
+
+/*Pagina Inicial*/
+.banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	text-align: center;
+	/*em é o tamanho base, 2 em nesse caso quer dizer que o titulo terá 2 vezes o tamanho padrão*/
+	font-size: 2em;
+	margin: 0 0 1em;
+	/*Limpa o Float abaixo*/
+	clear: left;
+}
+
+.titulo-principal:first-letter{
+	font-weight: bold;
+}
+
+/*Mexer só com a primeira linha do texto
+p:first-line{
+	font-weight: bold;
+}
+*/
+/*Carrega coisas antes e depois do Titulo hmtl, no caso. Esse tipo de conteudo não pode ser copiado por ser CSS*/
+.titulo-principal:before{
+	content: "[ ";
+}
+
+.titulo-principal:after{
+	content: " ]";
+}
+
+.principal{
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.utensilios{
+	width: 150px;
+	/*Faz o elemento 'flutuar', outros elementos podem ficar em sua posição, mas nao exatamente em baixo dele*/
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa{
+	padding: 3em 0;
+	/*linear-gradiente(cor inicial 50%, cor1, cor2, ..., cor final) -> muda lentamente a cor inicial cor1, 
+	da cor1 para cor2 e assim até para final, a formar um degrade. A porcentagem faz a cor ter essa porcentagem
+	na tela. E existe também o radial-gradiente, mesma coisa só que com circulos*/
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.mapa p{
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.beneficios{
+	padding: 3em 0;
+	background: #888888;
+	/*Sombra interna*/
+	box-shadow: inset 0 0 30px #FFFFFF;
+	/*text-shadow para texto*/
+}
+
+.conteudo-beneficios{
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens{
+	/*Espaçamento entre linhas*/
+	line-height: 1.5;
+}
+
+.itens:before{
+	content: "🟊";
+}
+
+/*Trata o primeiro item da lista
+nth-child(2n) -> pega o item que estiver dentro do (), nesse caso todos os pares, pois é 2n
+mas poderia ser só o 4 colocando (4) por exemplo*/
+.itens:first-child{
+	font-weight: bold;
+}
+
+.imagem-beneficios{
+	width: 60%;
+}
+
+.imagem-beneficios:hover{
+	opacity: 0.3;
+	/*Coloca uma sombra no elemento*/
+	box-shadow: 10px 10px 5px /*degrade na sombra*/ /*20px intensidade*/ #000000;
+}
+
+.video{
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	background: #888888;
+}
+
+/*media query para saber coisas sobre o dispositivo*/
+@media screen and (max-width: 480px){
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .utensilios{
+		width: auto;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+	nav{
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios{
+		width: 100%;
+	}
+}
+
+/*
+Seleciona só paragrafos filhos DIRETOS da Main
+main > p{
+	
+}
+
+Seleciona paragrafo que vem depois de uma imagem
+img + p{
+
+}
+
+Seleciona TODOS paragrafos que vem depois de uma imagem
+img ~ p{
+	
+}
+
+Seleciona todos paragrafos na principal que NÃO são id Missao
+.principal p:not(#missao){
+	
+}
+
+Faz o calculo
+calc(40% - 26px)
+
+Da uma opacidade de 30% ao elemento
+opacity: 0.7;
+
+Da uma opacidade de 30% a cor
+rgba(55,55,55, 0.3)
+*/
